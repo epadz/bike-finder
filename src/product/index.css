@@ -1,0 +1,667 @@
+.productWrapper{
+    width: 100vw;
+    height: calc(100vh - 64px);
+    display: flex;
+}
+
+.productSidebar{
+    flex: 0 0 200px;
+    background-color: #f8f8f8;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 3px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    position: relative;
+}
+
+.productSidebar .productSidebarTop{
+    width: 160px;
+    flex: 0 0 60px;
+    margin: 0 10px;
+    font-size: 16px;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+}
+
+.productSidebar .productSidebarTop .backButton{
+    display: flex;
+    flex: 0 0 30px;
+    width: 80px;
+    padding: 4px;
+    line-height: 22px;
+    font-size: 18px;
+    background-color: #c8c8c8;
+    font-weight: bold;
+    white-space: nowrap;
+    border-radius: 2px;
+    color: #333333;
+}
+
+.productSidebar .productSidebarTop .sidebarTitle{
+    flex: 1;
+    text-align: center;
+    color: #a8a8a8;
+    font-weight: bold;
+    padding: 14px 0 0 0;
+    line-height: 16px;
+    font-size: 16px;
+}
+
+.product{
+    flex: 1;
+    position: relative;
+    overflow-x: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #e8e8e8;
+}
+
+.product .nextItem{
+    position: fixed;
+    right: -50px;
+    top: 50vh;
+    width: 70px;
+    height: 40px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: solid 1px #b8b8b8;
+    border-right: none;
+    background-color: #f8f8f8;
+    padding: 10px 3px;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product .nextItem:hover{
+    right: 0;
+}
+
+.product .prevItem{
+    position: fixed;
+    left: -50px;
+    top: 50vh;
+    width: 70px;
+    height: 40px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: solid 1px #b8b8b8;
+    border-left: none;
+    background-color: #f8f8f8;
+    padding: 10px 3px;
+    line-height: 18px;
+    font-size: 14px;
+    text-align: right;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product .prevItem:hover{
+    left:0;
+}
+
+.product .nextItem .glyphicon,
+.product .prevItem .glyphicon{
+    width: 14px;
+    height: 14px;
+    top: 2px;
+}
+
+.product .goBack{
+    position: fixed;
+    top: 80px;
+    left: 10px;
+    width: 60px;
+    height: 32px;
+    padding: 7px 8px 9px 8px;
+    line-height: 16px;
+    font-size: 16px;
+    border: solid 1px #b8b8b8;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product .spacer{
+    height: 100vh;
+    width: 100vw;
+}
+
+.product .topPhoto{
+    margin: 20px auto;
+    width: 60vw;
+    min-width: 800px;
+    height: 25vh;
+    min-height: 400px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product .info{
+    background-color: #f8f8f8;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
+    margin: 20px auto;
+    width: 60vw;
+    min-width: 800px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: flex;
+    border-radius: 2px;
+}
+
+.product .info .gallery{
+    flex: 2;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product .info .gallery .curImage{
+    width: 100%;
+    flex: 3;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2px;
+}
+
+.product .info .gallery .galleryNav{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product .info .gallery .galleryNav .galleryItem{
+    flex: 1;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5px;
+    border-radius: 2px;
+    border: 1px solid #e8e8e8;
+}
+
+.product .info .gallery .galleryNav .galleryItem:first-child{
+    margin-left: 0;
+}
+
+.product .info .gallery .galleryNav .galleryItem:last-child{
+    margin-right: 0;
+}
+
+.product .info .productDetails{
+    flex: 4;
+}
+
+.product .info .basicInfo{
+    width: 100%;
+    display: flex;
+}
+
+.product .info .basicInfo .title{
+    font-size: 28px;
+    height: 34px;
+    font-weight: bold;
+}
+
+.product .info .basicInfo .price{
+    font-size: 18px;
+    height: 24px;
+    color: #666666;
+}
+
+.product .info .basicInfo .details{
+    height: 16px;
+    color: #666666;
+}
+
+.product .info .basicInfo .details > div{
+    float: left;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.product .info .basicInfo .brand{
+    flex: 0 0 100px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.product .info .desc{
+    width: 100%;
+    margin-top: 10px;
+    color: #666666;
+}
+
+.product .info .buy{
+    width: 100%;
+    margin: 30px 0 5px 0;
+    height: 30px;
+}
+
+.product .info .buy .label{
+    position: absolute;
+    top: -20px;
+    left: 0;
+    height: 16px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.product .info .buy .colors{
+    height: 30px;
+    float: left;
+    position: relative;
+
+}
+
+.product .info .buy .colors > span {
+    width: 38px;
+    height: 38px;
+    display: block;
+    float: left;
+}
+
+.product .info .buy .sizing{
+    float: left;
+    height: 38px;
+    padding-top: 2px;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+.product .info .buy .quantity{
+    float: left;
+    height: 38px;
+    padding-top: 2px;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+.product .info .buy .addToCart{
+    float: right;
+    padding-top: 2px;
+}
+
+.product .specs{
+    background-color: #f8f8f8;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
+    margin: 0 auto 20px auto;
+    width: 60vw;
+    min-width: 800px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    overflow-y: hidden;
+    position: relative;
+    border-radius: 2px;
+}
+
+.product .specs .tabs{
+    width: 100%;
+    height: 37px;
+    margin-bottom: 10px;
+    padding: 0 0 5px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.product .specs .tabs .tab{
+    float: left;
+    font-size: 22px;
+    margin: 4px 30px 0 0;
+    height: 32px;
+    line-height: 32px;
+    cursor: pointer;
+    color: #777777;
+}
+
+.product .specs .tabs .active{
+    float: left;
+    font-size: 22px;
+    margin-right: 30px;
+    height: 38px;
+    line-height: 22px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #777777;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.product .specs .seeMore{
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    color: #666666;
+    background-color: #f8f8f8;
+    box-shadow: rgba(248, 248, 248, 1) 0 -15px 20px;
+}
+
+.product .specs .content{
+    width: 100%;
+    font-size: 14px;
+    position: relative;
+    border-radius: 4px;
+    padding: 8px;
+    overflow-y: hidden;
+}
+
+.product .specs .title{
+    width: 100%;
+    height: 34px;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 10px 0 0 10px;
+
+}
+
+.table{
+    width: 100%;
+    min-height: 10px;
+    position: relative;
+    border-top: solid 1px #666666;
+    border-bottom: solid 1px #666666;
+    margin-bottom: 25px;
+}
+
+.table .row{
+    width: 100%;
+    min-height: 10px;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    margin: 0;
+
+}
+
+.table .row:nth-child(even){
+    background-color: #e8e8e8;
+}
+
+.table .row .cell{
+    min-height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    padding: 10px;
+}
+
+.table .row .cell:first-child{
+    flex: 1;
+    font-weight: bold;
+}
+
+.table .row .cell:last-child{
+    flex: 5;
+    font-size: 12px;
+}
+
+.sizeChart{
+    width: 100%;
+    min-height: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.sizeChart .row{
+    width: 100%;
+    min-height: 30px;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    margin: 0;
+}
+
+.sizeChart .row .cell{
+    flex: 1;
+    height: 30px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0 5px;
+    position: relative;
+}
+
+.sizeChart .row .cell > span:first-child{
+    z-index: 2;
+    position: relative;
+    border-bottom: solid 1px #333333;
+}
+
+
+.sizeChart .row .cell > span:nth-child(2){
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: -5px;
+    height: 260px;
+    background-color: #e8e8e8;
+    border: 5px solid #e8e8e8;
+    box-sizing: content-box;
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.sizeChart .row .sizeFiller{
+
+}
+
+.sizeChart .row .sizeBar{
+    background-color: #b8b8b8;
+    height: 30px;
+    margin: 5px 0;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    z-index: 3;
+}
+
+.faq{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.faq .question{
+    width: 100%;
+    background-color: #b8b8b8;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.faq .answer{
+    width: calc(100% - 50px);
+    background-color: #e8e8e8;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 10px 0 0 50px;
+}
+
+.faq .faqAuthor{
+    width: 100%;
+    text-align: right;
+    clear: both;
+    color: #555555;
+    font-size: 14px;
+}
+
+.faq .reply{
+    width: 100%;
+    text-align: right;
+    padding: 5px 10px;
+}
+
+.content .ask{
+    font-size: 18px;
+}
+
+.product .reviews{
+    background-color: #f8f8f8;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
+    margin: 0 auto 20px auto;
+    width: 60vw;
+    min-width: 800px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 2px;
+}
+
+.product .reviews .top{
+    width: 100%;
+    height: 32px;
+    padding: 6px 0;
+    margin-bottom: 10px;
+}
+
+.product .reviews .top > div:first-child{
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    line-height: 20px;
+    height: 20px;
+}
+
+.product .reviews .top > div{
+    float: left;
+    margin-right: 10px;
+}
+
+.product .reviews .highlights{
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+}
+
+.product .reviews .highlights > div{
+    background-color: #e8e8e8;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.product .reviews .highlights .pros{
+    flex: 1;
+}
+
+.product .reviews .highlights .cons{
+    margin: 0 15px;
+    flex: 1;
+}
+
+.product .reviews .highlights > div .term{
+    display: inline-block;
+    padding: 5px;
+    height: 24px;
+    line-height: 14px;
+    font-size: 14px;
+    background-color: #c8c8c8;
+    margin: 4px;
+    word-break: keep-all;
+    border-radius: 2px;
+}
+
+.product .reviews .highlights .ratings{
+    flex: 0 0 160px;
+}
+
+.product .reviews .highlights .ratings .rating{
+    padding: 5px;
+    font-weight: bold;
+}
+
+.product .reviews .highlights .ratings .rating .starRating{
+    float: left;
+}
+
+.product .reviews .highlights div .title{
+    width: 100%;
+    height: 30px;
+    line-height: 20px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.product .reviews .loadMoreReviews{
+    width: 150px;
+    text-align: center;
+    height: 24px;
+    font-size: 16px;
+    margin: 10px auto;
+    background-color: #aaaaaa;
+    color: #000;
+    border-radius: 2px;
+}
+
+.review{
+    width: 100%;
+    min-height: 50px;
+    background-color: #e8e8e8;
+    margin-top: 16px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.review .reviewHeader{
+    width: 100%;
+    display: flex;
+    height: 64px;
+    margin-bottom: 10px;
+}
+
+.review .reviewHeader .reviewInfo{
+    flex: 1;
+}
+
+.review .reviewHeader .reviewInfo .reviewTitle{
+    height: 28px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.review .reviewHeader .reviewInfo .reviewRating{
+    height: 20px;
+}
+
+.review .reviewHeader .reviewInfo .reviewAuthor{
+    height: 16px;
+
+}
+
+.review .reviewHeader .reviewInfo .reviewAuthor > span{
+    color: #666666;
+    margin-left: 10px;
+}
+
+.review .reviewHeader .reviewUsefulness{
+    flex: 0 0 250px;
+}
+
+.review .reviewHeader .reviewUsefulness > div{
+    margin: 0 5px;
+    float: right;
+}
+
+.review .reviewContent{
+
+}

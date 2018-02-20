@@ -1,0 +1,231 @@
+.dropDown{
+    height: 32px;
+    min-width: 64px;
+    position: relative;
+}
+
+.dropDown .dropDownIcon{
+    float: left;
+    margin-right: 4px;
+    text-align: center;
+    height: 32px;
+    width: 24px;
+}
+
+.dropDown .dropDownIcon .glyphicon{
+    line-height: 32px;
+    font-size: 20px;
+}
+
+.dropDown .box{
+    float: left;
+    height: 32px;
+    min-width: 64px;
+    background-color: #c8c8c8;
+    color: #333333;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    border-radius: 2px;
+}
+
+.dropDown .box .current{
+    height: 24px;
+    margin: 4px 8px 4px 12px;
+    line-height: 24px;
+    flex: 1;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.dropDown .box .openButton{
+    height: 24px;
+    flex: 0 0 24px;
+    margin: 4px 8px;
+    font-size: 14px;
+    color: #5F9EA0;
+}
+
+.dropDown .box .openButton .glyphicon{
+    line-height: 24px;
+    text-align: center;
+}
+
+.dropDown .box .options{
+    position: absolute;
+    top: 37px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 24px;
+    background-color: #c8c8c8;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
+    padding: 4px 0;
+    border-radius: 2px;
+    z-index: 100;
+}
+
+.dropDown .box .options .option{
+    color: #333333;
+    height: 32px;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    line-height: 16px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/**
+Button
+ */
+
+.button{
+    float: left;
+    height: 32px;
+    min-width: 64px;
+    background-color: #c8c8c8;
+    color: #333333;
+    cursor: pointer;
+    position: relative;
+    padding: 4px 8px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    border-radius: 2px;
+}
+
+.button .glyphicon{
+    margin-left: 10px;
+    color: #5F9EA0;
+}
+
+/**
+Number
+ */
+
+.number{
+    height: 32px;
+}
+
+.number > div {
+    float: left;
+    margin: 4px;
+    height: 24px;
+}
+
+.number .value{
+    padding: 4px;
+    box-sizing: border-box;
+    height: 24px;
+    line-height: 16px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    border: solid 1px #666666;
+    border-radius: 4px;
+}
+
+/**
+Star Rating
+ */
+
+.starRating{
+    position: relative;
+    height: 20px;
+    width: 100px;
+}
+
+.starRating .glyphicon{
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin: 2px 4px 2px 0;
+    line-height: 20px;
+    top: -2px;
+}
+
+.starRatingSM .glyphicon{
+    top: 1px;
+}
+
+.starRating .emptyStars{
+    color: #666666;
+    position: relative;
+    height: 20px;
+    width: 100px;
+    line-height: 20px;
+}
+
+.starRating .filledStars{
+    color: #FFBD34;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.starRatingSM{
+    position: relative;
+    height: 15px;
+    width: 60px;
+}
+
+.starRatingSM .glyphicon{
+    font-size: 10px;
+    width: 10px;
+    height: 15px;
+    line-height: 15px;
+    margin: 0 2px 0 0;
+}
+
+.starRatingSM .emptyStars{
+    color: #666666;
+    position: relative;
+    height: 15px;
+    line-height: 15px;
+    width: 60px;
+}
+
+.starRatingSM .filledStars{
+    color: #FFBD34;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    line-height: 15px;
+    white-space: nowrap;
+}
+
+/**
+Color Dot
+ */
+
+.colorDot{
+    width: 30px;
+    height: 30px;
+    border: solid 3px #c8c8c8;
+    border-radius: 20px;
+    margin: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.colorDotSelected{
+    width: 34px;
+    height: 34px;
+    margin: 2px;
+    border: solid 3px #333333;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.colorDot div{
+    float: left;
+}

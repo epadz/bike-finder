@@ -1,0 +1,123 @@
+.page{
+    margin: 0 auto;
+    width: 80vw;
+    min-width: 600px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.page .categories{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    height: 80vh;
+}
+
+.page .categories .categoryRow{
+    display: flex;
+    flex: 1;
+}
+
+.page .categories .categoryRow .category{
+    flex: 1;
+    background-color: #2b2b2b;
+    line-height: 100%;
+    text-align: center;
+    margin: 10px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0,0,0,0.9) inset;
+    overflow: hidden;
+}
+
+.page .categories .categoryRow .category > span{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+}
+
+.page .categories .categoryRow .category:hover > span{
+    filter: grayscale(0%);
+}
+
+.page .categories .categoryRow .category > div{
+    font-size: 24px;
+    text-align: center;
+    flex: 0 0 32px;
+    line-height: 32px;
+    z-index: 3;
+    color: #5F9EA0;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: auto;
+    margin: auto;
+    padding: 6px;
+    border-radius: 2px;
+    font-family: 'Shrikhand', cursive;
+}
+
+.page .categories .categoryRow .titleTile{
+    flex: 2;
+    background-color: #2b2b2b;
+    line-height: 100%;
+    text-align: center;
+    margin: 10px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 2px;
+}
+
+.page .categories .categoryRow .titleTile > div {
+    font-size: 32px;
+    text-align: center;
+    flex: 0 0 32px;
+    line-height: 32px;
+    z-index: 3;
+    color: lavender;
+    font-family: 'Shrikhand', cursive;
+}
+
+.page .features{
+    width: 100%;
+    display: flex;
+    height: 200px;
+}
+
+.page .features .featured{
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.page .features .featured .featuredHeader{
+    width: 100%;
+    flex: 0 0 30px;
+    line-height: 30px;
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+}
+
+.page .features .featured .featuredImage{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

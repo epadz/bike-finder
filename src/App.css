@@ -1,0 +1,82 @@
+.App {
+  background-color: #e8e8e8;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
+  height: 64px;
+  background-color: #3c3f41;
+  display: flex;
+}
+
+.header > div{
+  margin: 8px 0;
+  height: 48px;
+  float: left;
+}
+
+.header .menu{
+  width: 48px;
+}
+
+.header .logo{
+  line-height: 48px;
+  color: #5F9EA0;
+  font-size: 36px;
+  font-family: 'Shrikhand', cursive;
+  flex: 0 0 25vw;
+  margin: 8px 2.5vw;
+  box-sizing: border-box;
+  max-width: 300px;
+  /*font-family: 'Racing Sans One', cursive;*/
+}
+
+.header .search{
+  width: 40vw;
+  background-color: #2b2b2b;
+  font-size: 24px;
+  color: #dfdad0;
+  padding: 8px 16px;
+  line-height: 32px;
+  box-sizing: border-box;
+  flex: 2;
+  border-radius: 2px;
+}
+
+.header .search .glyphicon{
+  top:3px;
+}
+
+.header .cart{
+  flex: 0 0 48px;
+  color: floralwhite;
+  text-align: center;
+  margin: 8px;
+  position: relative;
+}
+.header .cart .glyphicon{
+  line-height: 48px;
+  font-size: 36px;
+}
+
+.header .cart .numItemsInCart{
+  position: absolute;
+  background-color: #5F9EA0;
+  height: 12px;
+  min-width: 12px;
+  border-radius: 6px;
+  line-height: 12px;
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #3c3f41;
+  top: 4px;
+  right: 0;
+}
+
+.App > .content{
+  width: 100vw;
+  height: calc(100vh - 64px);
+}

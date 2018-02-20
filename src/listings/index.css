@@ -1,0 +1,472 @@
+.listings{
+    width: 100vw;
+    height: calc(100vh - 64px);
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.listings .filters{
+    flex: 0 0 25vw;
+    max-width: 300px;
+    margin: 40px 2.5vw 200px 2.5vw;
+    min-height: 80px;
+    background-color: #f8f8f8;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 10px;
+    border-radius: 2px;
+}
+
+.listings .main{
+    flex: 1;
+    min-height: 90vh;
+    margin: 40px 64px 200px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.listings .main .refinements{
+    flex: 0 0 48px;
+    background-color: #f8f8f8;
+    margin-bottom: 16px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+    display: flex;
+    border-radius: 2px;
+}
+
+.listings .main .refinements .activeFilters{
+    flex: 1;
+    margin: 8px;
+}
+
+.listings .main .refinements .sort{
+    flex: 0 0 180px;
+    margin: 8px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.listings .main .results{
+    min-height: 200px;
+}
+
+.listings .main .numResults{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.listings .pinned{
+    position: fixed;
+    background-color: #f8f8f8;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 170px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -2px 5px;
+    display: none;
+}
+
+/*
+    FILTERS
+*/
+
+.filter {
+    min-height: 40px;
+    width: 100%;
+    border-bottom: #c8c8c8 solid 2px;
+}
+
+.filter .filterHeader{
+    display: flex;
+    height: 40px;
+    padding: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.filter .filterHeader .filterTitle{
+    flex: 1;
+    line-height: 24px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.filter .filterHeader .filterToggle{
+    flex: 0 0 24px;
+    border: #333333 solid 2px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 0;
+}
+
+.filter .filterHeader .filterToggle .glyphicon{
+    line-height: 24px;
+    font-size: 16px;
+    right: -1px;
+    margin-top: 1px
+}
+
+.filter .filterOptions{
+    background-color: #c8c8c8;
+    overflow: hidden;
+}
+
+.filter .filterOptions .filterOption{
+    display: flex;
+    height: 40px;
+    padding: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-top: solid 1px #e8e8e8;
+}
+
+.filter .filterOptions .filterOption .optionTitle{
+    flex: 1;
+    line-height: 24px;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.filter .filterOptions .filterOption .optionToggle{
+    flex: 0 0 20px;
+    height: 20px;
+    border: #333333 solid 3px;
+    border-radius: 12px;
+    margin: 2px
+}
+
+.filter .colorOptions{
+    background-color: #c8c8c8;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 20px;
+    box-sizing: border-box;
+}
+
+.filter .colorOptions .colorOption{
+    flex: 0 0 30px;
+    height: 30px;
+    border: solid 3px;
+    border-radius: 20px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+/**
+Refinement Bar
+ */
+
+.activeFilter{
+    float: left;
+    height: 32px;
+    min-width: 60px;
+    background-color: #c8c8c8;
+    margin-right: 10px;
+    position: relative;
+    padding: 0 32px 0 8px;
+    border-radius: 2px;
+    color: #333333;
+}
+
+.activeFilter .filterName{
+
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.activeFilter .remove{
+    position: absolute;
+    right: 4px;
+    top: 0;
+    height: 32px;
+    width: 24px;
+    text-align: center;
+    color: #5F9EA0;
+    cursor: pointer;
+}
+
+.activeFilter .remove .glyphicon{
+    line-height: 32px;
+}
+
+/**
+PRODUCT
+ */
+
+.productTile{
+    width: 220px;
+    min-height: 220px;
+    box-sizing: border-box;
+    margin: 10px 20px 10px 0;
+    padding: 10px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+    position: relative;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.productTile .pinButton{
+    width: 20px;
+    height: 20px;
+    text-align: right;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #FF8582;
+}
+
+.productTile .tag{
+    min-width: 20px;
+    height: 28px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff3a33;
+    color: #f8f8f8;
+    padding: 4px;
+    line-height: 20px;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+.productTile .pinButton .glyphicon{
+    line-height: 16px;
+    font-size: 16px;
+    top: 0;
+}
+
+.productTile .image{
+    flex: 1;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.productTile .image > span{
+    background-color: rgba(0, 0, 0, 0.5);
+    flex: 1;
+    display: none;
+}
+
+.productTile .image:hover > span{
+    display: block;
+}
+
+.productTile .title{
+    flex: 0 0 30px;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 28px;
+    overflow: hidden;
+}
+
+.productTile .info{
+    flex: 0 0 42px;
+    display: flex;
+}
+
+.productTile .info .details{
+    flex: 3;
+    color: #666666;
+}
+
+.productTile .info .details .brandAndYear{
+    height: 18px;
+    width: 100%;
+}
+
+.productTile .info .details .brandAndYear .brand{
+    float: left;
+    height: 18px;
+    text-align: left;
+    line-height: 18px;
+    font-size: 12px;
+    color: #484848;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.productTile .info .details .brandAndYear .year{
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+.productTile .info .details .desc{
+    height: 12px;
+    line-height: 12px;
+    font-size: 10px;
+    text-align: left;
+}
+
+.productTile .info .priceAndRating{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.productTile .info .priceAndRating .price{
+    flex: 0 0 22px;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 20px;
+    color: #666666;
+    text-align: right;
+}
+
+.productTile .info .priceAndRating .rating{
+    flex: 1;
+}
+
+.productTile .info .priceAndRating .rating .starRating{
+    float: right;
+    margin-right: -4px;
+}
+
+.productTileSM{
+    width: 160px;
+    height: 160px;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 6px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
+    position: relative;
+    border-radius: 2px;
+}
+
+.productTileSM .pinButton{
+    width: 15px;
+    height: 15px;
+    text-align: right;
+    cursor: pointer;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: #FF8582;
+}
+
+.productTileSM .pinButton .glyphicon{
+    line-height: 15px;
+    font-size: 15px;
+    top: 0;
+}
+
+.productTileSM .image{
+    flex: 1;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.productTileSM .image > span{
+    background-color: rgba(0, 0, 0, 0.5);
+    flex: 1;
+    display: none;
+}
+
+.productTileSM .image:hover > span{
+    display: block;
+}
+
+.productTileSM .title{
+    flex: 0 0 20px;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.productTileSM .info{
+    flex: 0 0 30px;
+    display: flex;
+}
+
+.productTileSM .info .brandAndYear{
+    flex: 3;
+    color: #666666;
+}
+
+.productTileSM .info .brandAndYear .brand{
+    height: 16px;
+    text-align: left;
+    line-height: 16px;
+    font-size: 12px;
+    color: #484848;
+    font-weight: bold;
+}
+
+.productTileSM .info .brandAndYear .year{
+    height: 14px;
+    line-height: 14px;
+    font-size: 12px;
+}
+
+.productTileSM .info .priceAndRating{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.productTileSM .info .priceAndRating .price{
+    flex: 0 0 15px;
+    font-weight: bold;
+    line-height: 15px;
+    font-size: 14px;
+    color: #666666;
+    text-align: right;
+}
+
+.productTileSM .info .priceAndRating .rating{
+    flex: 1;
+}
+
+.productTileSM .info .priceAndRating .rating .starRating{
+    float: right;
+    margin-right: -4px;
+}
+
+/**
+Pinned
+ */
+
+.pinned .toggle{
+    height: 30px;
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    top: -30px;
+    background-color: #f8f8f8;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -2px 5px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+    color: #444444;
+    padding: 4px 15px 6px 15px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pinned .toggle .glyphicon{
+    top: 4px;
+}
